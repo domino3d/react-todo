@@ -7,8 +7,9 @@ const TodoList: React.FC = () => {
   const todos = useSelector((state: any) => state.todos);
   const dispatch = useDispatch();
 
-  const handleToggle = (id: number) => {
-    dispatch(toggleTodo(id));
+  // only for clicks on marker
+  const handleToggle = (id: number, e: any) => {
+    if (e.target?.localName == "li") dispatch(toggleTodo(id));
   };
 
   const handleUpdateTodo = (id: number, newText: string, completed: boolean) => {
@@ -28,8 +29,8 @@ const TodoList: React.FC = () => {
       {todos.map((todo: TodoItem) => (
         <li
           key={todo.id}
-          onClick={() => handleToggle(todo.id)}
           className={todo.completed ? 'done' : ''}
+          onClick={(e) => handleToggle(todo.id, e)}
         >
           <input
             type="text"
