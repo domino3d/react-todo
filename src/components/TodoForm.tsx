@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../store/store';
+import { TodoItem } from '../models/todoItem.interface';
 
 const TodoForm: React.FC = () => {
   const [text, setText] = useState('');
@@ -9,7 +10,12 @@ const TodoForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (text.trim() !== '') {
-      dispatch(addTodo(text));
+      const item: TodoItem = {
+        id: Date.now(),
+        text,
+        completed: false,
+      };
+      dispatch(addTodo(item));
       setText('');
     }
   };

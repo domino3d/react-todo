@@ -3,8 +3,8 @@
 import { createRoot } from 'react-dom/client'; // react 18 way
 import { Provider } from 'react-redux';
 import store from './store/store';
-import './index.css';
 import App from './App';
+import './index.css';
 
 // ReactDOM.render(
 //   <Provider store={store}>
