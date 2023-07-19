@@ -7,7 +7,7 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <div className='todoApp'>
-      <h1>Todo App</h1>
+      <h1>Todo App <span className='blink'>_</span></h1>
       <TodoForm />
       <TodoList />
       <Footer />

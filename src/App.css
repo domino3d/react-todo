@@ -6,7 +6,8 @@
   --bg-color-1: #74EBD5;
   --bg-color-2: #ffad86;
   --bg-color-3: #6581ff;
-  --shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3);;
+  --shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3);
+  ;
 
 }
 
@@ -31,6 +32,22 @@
   filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.3));
 }
 
+.todoApp h1 .blink {
+  animation: 1.5s blink step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 .todoApp input {
   box-shadow: var(--shadow);
   margin: 5px 10px;
@@ -39,7 +56,7 @@
   font-size: 15px;
   border: solid 0px;
   border-radius: 8px;
-  
+
   width: -webkit-fill-available;
 }
 
