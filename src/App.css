@@ -1,6 +1,56 @@
-@import "components/todoList.css";
+@import "components/List/todoList.css";
+@import "components/Form/todoForm.css";
+@import "components/Footer/footer.css";
 
-.App {
-  text-align: center;
+:root {
+  --bg-color-1: #74EBD5;
+  --bg-color-2: #ffad86;
+  --bg-color-3: #6581ff;
+  --shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3);;
+
 }
 
+.todoApp {
+
+  background-color: var(--bg-color-1);
+  background-image: linear-gradient(135deg, var(--bg-color-1) 0%, var(--bg-color-2) 50%, var(--bg-color-3) 100%);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.todoApp h1 {
+  font-size: 50px;
+  color: white;
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.3));
+}
+
+.todoApp input {
+  box-shadow: var(--shadow);
+  margin: 5px 10px;
+  padding: 8px;
+  color: darkblue;
+  font-size: 15px;
+  border: solid 0px;
+  border-radius: 8px;
+  
+  width: -webkit-fill-available;
+}
+
+.todoApp button {
+  box-shadow: var(--shadow);
+  padding: 8px;
+  border-radius: 8px;
+  text-wrap: nowrap;
+}
+
+.todoApp button:hover {
+  background-color: white;
+  border: 2px solid var(--bg-color-1);
+}

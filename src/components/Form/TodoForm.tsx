@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../store/store';
-import { TodoItem } from '../models/todoItem.interface';
+import { addTodo } from '../../store/store';
+import { TodoItem } from '../../models/todoItem.interface';
 
 const TodoForm: React.FC = () => {
   const [text, setText] = useState('');

@@ -1,12 +1,5 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { log } from 'console';
 import { TodoItem } from '../models/todoItem.interface';
-
-// interface TodoItem {
-//     id: number;
-//     text: string;
-//     completed: boolean;
-// }
 
 interface TodoState {
   todos: TodoItem[];
@@ -21,13 +14,6 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action: PayloadAction<TodoItem>) => {
-      // const newTodo: TodoItem = {
-      //     id: Date.now(),
-      //     text: action.payload,
-      //     completed: false,
-      // };
-      // state.todos.push(newTodo);
-      console.log(">>>", action.payload)
       state.todos.push(action.payload);
     },
     toggleTodo: (state, action: PayloadAction<number>) => {

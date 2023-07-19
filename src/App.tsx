@@ -1,14 +1,16 @@
 import React from 'react';
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
+import TodoForm from './components/Form/TodoForm';
+import TodoList from './components/List/TodoList';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className='todoApp'>
       <h1>Todo App</h1>
       <TodoForm />
       <TodoList />
+      <Footer />
     </div>
   );
 };

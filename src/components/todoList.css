@@ -1,6 +1,0 @@
-li.done::marker  {
-    content: "✔️ ";
-}
-li::marker {
-    content: "❌ ";
-}

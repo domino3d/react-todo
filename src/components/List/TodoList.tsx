@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleTodo, updateTodo, deleteTodo } from '../store/store';
-import { TodoItem } from '../models/todoItem.interface';
+import { toggleTodo, updateTodo, deleteTodo } from '../../store/store';
+import { TodoItem } from '../../models/todoItem.interface';
 
 const TodoList: React.FC = () => {
   const todos = useSelector((state: any) => state.todos);
@@ -32,13 +32,15 @@ const TodoList: React.FC = () => {
           className={todo.completed ? 'done' : ''}
           onClick={(e) => handleToggle(todo.id, e)}
         >
-          <input
-            type="text"
-            value={todo.text}
-            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
-            onChange={e => handleUpdateTodo(todo.id, e.target.value, todo.completed)}
-          />
-          <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+          <div className='wrapper'>
+            <input
+              type="text"
+              value={todo.text}
+              style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+              onChange={e => handleUpdateTodo(todo.id, e.target.value, todo.completed)}
+            />
+            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+          </div>
         </li>
       ))}
     </ul>

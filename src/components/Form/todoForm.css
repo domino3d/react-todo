@@ -1,0 +1,20 @@
+form {
+  width: 30%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 992px) {
+  form {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 90%;
+  }
+}
