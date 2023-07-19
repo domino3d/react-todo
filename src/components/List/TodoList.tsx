@@ -9,7 +9,7 @@ const TodoList: React.FC = () => {
 
   // only for clicks on marker
   const handleToggle = (id: number, e: any) => {
-    if (e.target?.localName == "li") dispatch(toggleTodo(id));
+    if (e.target?.localName === "li") dispatch(toggleTodo(id));
   };
 
   const handleUpdateTodo = (id: number, newText: string, completed: boolean) => {
