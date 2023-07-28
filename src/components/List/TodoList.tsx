@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTodo, updateTodo, deleteTodo } from '../../store/store';
 import { TodoItem } from '../../models/todoItem.interface';
 
 const TodoList: React.FC = () => {
+  const [data, setData] = useState([]);
   const todos = useSelector((state: any) => state.todos);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   // only for clicks on marker
   const handleToggle = (id: number, e: any) => {
