@@ -4,5 +4,5 @@ Yet another todo app in react using typescript and Redux Toolkit, implementing C
 ## Known issues 
 SCSS is not implemented due to inability to install python on localhost. Yeah, i know css could be much better then
 
-running here:
+Running here:
 https://domino3d.github.io/app/
